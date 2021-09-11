@@ -479,7 +479,7 @@
     width: 206px;
   }
   .container .foodApp {
-    background: url(/images/main-background.png) no-repeat;
+    background: url(../images/main-background.png) no-repeat;
     margin: 0 auto;
     max-width: 1440px;
     height: inherit;
@@ -504,6 +504,10 @@
   .container .foodApp .foodApp__button {
     margin-top: 44px;
   }
+  .container .foodApp .foodApp__button {
+    z-index: 1;
+    position: relative;
+  }
   .container .foodApp .foodApp__button button:hover {
     background-color: rgba(0, 0, 0, 0);
     border: 2px #FFFFFF;
@@ -511,6 +515,7 @@
     color: #FFFFFF;
   }
   .container .foodApp .foodApp__telephone {
+    z-index: 0;
     position: absolute;
     margin-top: 445px;
   }
