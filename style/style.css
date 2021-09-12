@@ -399,7 +399,7 @@
     display: none;
   }
   .container .header .header__menu {
-    display: block;
+    display: block !important;
     width: 500px;
     margin: 0 auto;
   }
@@ -434,6 +434,7 @@
 
 @media (min-width: 630px) {
   .container .header .header__menu {
+    display: block;
     margin: 0;
   }
   .container .header .header__menu .header__list {
