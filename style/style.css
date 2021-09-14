@@ -55,7 +55,7 @@
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   margin-top: 9px;
-  margin-left: 2px;
+  margin-left: 4px;
 }
 
 .container .header .header__body .header__burger span.active:nth-child(2) {
@@ -121,6 +121,10 @@
           align-items: center;
 }
 
+.container .foodApp .foodApp__img {
+  display: none;
+}
+
 .container .foodApp h5 {
   margin-top: 98px;
   font-weight: bold;
@@ -157,6 +161,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container .foodApp .foodApp__button button {
@@ -197,6 +204,7 @@
 
 .container .foodApp .foodApp__telephone img {
   width: 100%;
+  display: block;
 }
 
 .container .foodApp p {
@@ -298,6 +306,10 @@
           align-items: center;
 }
 
+.container .download .download__img {
+  display: none;
+}
+
 .container .download h2 {
   font-size: 40px;
   line-height: 57px;
@@ -317,7 +329,13 @@
 }
 
 .container .download .download__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .container .download .download__button button {
@@ -454,6 +472,9 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .container .foodApp .foodApp__button button:nth-child(1) {
     margin-right: 25px;
@@ -483,7 +504,6 @@
     background: url(../images/main-background.png) no-repeat;
     margin: 0 auto;
     max-width: 1440px;
-    height: inherit;
   }
   .container .foodApp h5 {
     margin-top: 73px;
@@ -631,6 +651,86 @@
   }
   .container .footer .footer__logo {
     display: block;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container .header {
+    max-width: none;
+    width: 100%;
+  }
+  .container .foodApp {
+    width: 100%;
+    margin: 0;
+    max-width: none;
+    background: none;
+  }
+  .container .foodApp .foodApp__img {
+    display: block;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+  }
+  .container .foodApp .foodApp__container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container .foodApp .foodApp__container .foodApp__button {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container .foodApp .foodApp__long {
+    width: 100%;
+  }
+  .container .create .create__container {
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .container .download {
+    max-width: none;
+    background: none;
+    width: 100%;
+  }
+  .container .download .download__img {
+    display: block;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+  }
+  .container .download .download__container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container .download .download__container .download__text h2 {
+    margin: 0;
+  }
+  .container .download .download__container .download__button {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container .footer {
+    max-width: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
