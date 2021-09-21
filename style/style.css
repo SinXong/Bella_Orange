@@ -38,44 +38,55 @@
       -ms-flex-direction: column;
           flex-direction: column;
   margin-right: 23px;
-  margin-bottom: 7px;
+  margin-bottom: 17px;
 }
 
-.container .header .header__body .header__burger span {
-  border-bottom: 2px solid #737373;
-  display: block;
-  width: 20px;
-  height: 4px;
-  opacity: 0.6;
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
-}
-
-.container .header .header__body .header__burger span.active:nth-child(1) {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  margin-top: 9px;
-  margin-left: 4px;
-}
-
-.container .header .header__body .header__burger span.active:nth-child(2) {
-  opacity: 0;
-}
-
-.container .header .header__body .header__burger span.active:nth-child(3) {
+.container .header .header__body .header__burger span,
+.container .header .header__body .header__burger span::before,
+.container .header .header__body .header__burger span::after {
   position: absolute;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  margin-bottom: 6px;
-  margin-right: 2px;
+  width: 30px;
+  height: 3px;
+  background-color: #737373;
 }
 
-.container .header .header__menu {
+.container .header .header__body .header__burger span::before,
+.container .header .header__body .header__burger span::after {
+  content: '';
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .header .header__body .header__burger span::before {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.container .header .header__body .header__burger span::after {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.container .header .header__body .header__menubtn_active span {
+  height: 0;
+}
+
+.container .header .header__body .header__menubtn_active span:before {
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+.container .header .header__body .header__menubtn_active span:after {
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+
+.container .header__menu {
   display: none;
-  margin-right: 50px;
 }
 
-.container .header .header__menu .header__list {
+.container .header__menu .header__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,7 +99,7 @@
           align-items: flex-end;
 }
 
-.container .header .header__menu .header__list li {
+.container .header__menu .header__list li {
   margin-top: 20px;
   list-style: none;
   font-weight: 600;
@@ -96,19 +107,19 @@
   color: #252B42;
 }
 
-.container .header .header__menu .header__list li a {
+.container .header__menu .header__list li a {
   color: #252B42;
 }
 
-.container .header .header__menu .header__list li a:hover {
+.container .header__menu .header__list li a:hover {
   color: #FA4A0C;
 }
 
-.container .header .header__menu .header__list a {
+.container .header__menu .header__list a {
   text-decoration: none;
 }
 
-.container .foodApp {
+.foodApp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,11 +132,11 @@
           align-items: center;
 }
 
-.container .foodApp .foodApp__img {
+.foodApp .foodApp__img {
   display: none;
 }
 
-.container .foodApp h5 {
+.foodApp h5 {
   margin-top: 98px;
   font-weight: bold;
   font-size: 16px;
@@ -134,7 +145,7 @@
   text-align: center;
 }
 
-.container .foodApp h1 {
+.foodApp h1 {
   margin-top: 17px;
   font-weight: bold;
   font-size: 36px;
@@ -143,7 +154,7 @@
   text-align: center;
 }
 
-.container .foodApp h4 {
+.foodApp h4 {
   margin-top: 17px;
   font-weight: 500;
   font-size: 24px;
@@ -153,7 +164,7 @@
   margin-bottom: 30px;
 }
 
-.container .foodApp .foodApp__button {
+.foodApp .foodApp__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,7 +177,7 @@
           align-items: center;
 }
 
-.container .foodApp .foodApp__button button {
+.foodApp .foodApp__button button {
   margin-top: 20px;
   background: #FA4A0C;
   -webkit-box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.07);
@@ -183,43 +194,43 @@
   transition: all 0.5s ease 0s;
 }
 
-.container .foodApp .foodApp__button button:hover {
+.foodApp .foodApp__button button:hover {
   background: #FFFFFF;
   border: 2px #FA4A0C;
   border-style: solid;
   color: #FA4A0C;
 }
 
-.container .foodApp p {
+.foodApp p {
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
   color: #000000;
 }
 
-.container .foodApp .foodApp__telephone {
+.foodApp .foodApp__telephone {
   margin-top: 0px;
   margin-right: 40px;
 }
 
-.container .foodApp .foodApp__telephone img {
+.foodApp .foodApp__telephone img {
   width: 100%;
   display: block;
 }
 
-.container .foodApp p {
+.foodApp p {
   margin-top: 116px;
   margin-bottom: 49px;
 }
 
-.container .foodApp .foodApp__line {
+.foodApp .foodApp__line {
   background-color: #E4E4E4;
   width: 100%;
   height: 0px;
   border: 3px solid #E4E4E4;
 }
 
-.container .create {
+.create {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,15 +246,15 @@
           align-items: center;
 }
 
-.container .create .create__container .create__text h2 {
+.create .create__container .create__text h2 {
   width: 100%;
 }
 
-.container .create .create__container .create__text h4 {
+.create .create__container .create__text h4 {
   width: 100%;
 }
 
-.container .create .create__container .container__img {
+.create .create__container .container__img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,12 +264,12 @@
   margin-top: 40px;
 }
 
-.container .create .create__container:nth-child(2) {
+.create .create__container:nth-child(2) {
   margin-top: 131px;
   margin-bottom: 211px;
 }
 
-.container .create h3 {
+.create h3 {
   margin-top: 65px;
   font-size: 24px;
   line-height: 36px;
@@ -266,7 +277,7 @@
   text-align: center;
 }
 
-.container .create h2 {
+.create h2 {
   margin-top: 40px;
   width: 327px;
   font-size: 40px;
@@ -275,7 +286,7 @@
   text-align: center;
 }
 
-.container .create h4 {
+.create h4 {
   margin-top: 40px;
   width: 253px;
   font-weight: 500;
@@ -285,11 +296,11 @@
   text-align: center;
 }
 
-.container .create img {
+.create img {
   margin-top: 0px;
 }
 
-.container .download {
+.download {
   width: inherit;
   height: 564px;
   background-color: #252B42;
@@ -306,11 +317,11 @@
           align-items: center;
 }
 
-.container .download .download__img {
+.download .download__img {
   display: none;
 }
 
-.container .download h2 {
+.download h2 {
   font-size: 40px;
   line-height: 57px;
   color: #FFFFFF;
@@ -319,7 +330,7 @@
   margin-top: 120px;
 }
 
-.container .download h4 {
+.download h4 {
   font-size: 24px;
   line-height: 38px;
   color: #BDBDBD;
@@ -328,7 +339,7 @@
   margin-top: 20px;
 }
 
-.container .download .download__button {
+.download .download__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -338,7 +349,7 @@
           justify-content: center;
 }
 
-.container .download .download__button button {
+.download .download__button button {
   background: #FA4A0C;
   width: 137px;
   height: 64px;
@@ -351,19 +362,19 @@
   transition: all 0.5s ease 0s;
 }
 
-.container .download .download__button button:nth-child(2) {
+.download .download__button button:nth-child(2) {
   width: 180px;
   margin-left: 10px;
 }
 
-.container .download .download__button button:hover {
+.download .download__button button:hover {
   background: #252B42;
   color: #FFFFFF;
   border: 2px #FFFFFF;
   border-style: solid;
 }
 
-.container .footer {
+.footer {
   width: inherit;
   height: 225px;
   display: -webkit-box;
@@ -378,11 +389,11 @@
           align-items: center;
 }
 
-.container .footer .footer__logo {
+.footer .footer__logo {
   display: none;
 }
 
-.container .footer .footer__icons {
+.footer .footer__icons {
   margin-top: 66px;
   width: 170px;
   display: -webkit-box;
@@ -393,7 +404,7 @@
           justify-content: space-between;
 }
 
-.container .footer p {
+.footer p {
   margin-top: 13px;
   font-size: 12px;
   line-height: 18px;
